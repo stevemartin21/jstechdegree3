@@ -1,0 +1,8 @@
+#nameError, #emailError, #activitiesError, #ccNumError, #zipError, #cvvError{
+
+	font-size: 1.5em;
+	color: white;
+	background-color: #ff4444;
+	padding: 20px;
+	margin:10px;
+}
