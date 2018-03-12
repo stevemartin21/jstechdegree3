@@ -247,47 +247,54 @@ payment.addEventListener('change', function(e){
 ////////////  Event Listener for when user presses submit button ////////////////////////
 
 submit.addEventListener('click', function(e){
-     
-         if (userName.value == '' ){
-                alert('You must fill our your username');
-                 e.preventDefault();
-                nameError.style.display='block';
-          }else if (userName.value !== '' ){
-                nameError.style.display='none';
-          } 
 
-        if(email.value == '' ){
-            alert('You must fill our your email'); 
-            emailError.style.display='block'; 
-             e.preventDefault();
-        }else if (email.value !== '' ){
-                emailError.style.display='none';
-        }
 
-        if(!all.checked && !frameworks.checked && !libs.checked && !express.checked && !node.checked  && !build.checked && !npm.checked){
-               alert('You must choose an activity'); 
-              activitiesError.style.display='block'; 
-               e.preventDefault();
-        }
+              console.log('You are the champion');
+               
+                   if (userName.value == '' ){
+                          alert('You must fill our your username');
+                           e.preventDefault();
+                          nameError.style.display='block';
+                    }else if (userName.value !== '' ){
+                          nameError.style.display='none';
+                    } 
 
-        else if (all.checked || frameworks.checked || libs.checked || express.checked || node.checked  || build.checked || npm.checked){
-                 activitiesError.style.display='none'; 
-                
-        }
+                  if(email.value == '' ){
+                      alert('You must fill our your email'); 
+                      emailError.style.display='block'; 
+                       e.preventDefault();
+                  }else if (email.value !== '' ){
+                          emailError.style.display='none';
+                  }
 
-function elValidator(){
-                if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value)){
-                  
-                  return (true)
-                }else{
-                     e.preventDefault();
-                  alert("You have entered an invalid email address!")
-                  return (false)            
-                }
-          }
-elValidator();
+                  if(!all.checked && !frameworks.checked && !libs.checked && !express.checked && !node.checked  && !build.checked && !npm.checked){
+                         alert('You must choose an activity'); 
+                        activitiesError.style.display='block'; 
+                         e.preventDefault();
+                  }
 
-if(creditSelect.value && !paypalSelect.value || !bitcoinSelect.value){
+                  else if (all.checked || frameworks.checked || libs.checked || express.checked || node.checked  || build.checked || npm.checked){
+                           activitiesError.style.display='none'; 
+                          
+                  }
+
+          function elValidator(){
+                          if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(email.value)){
+                            
+                            return (true)
+                          }else{
+                               e.preventDefault();
+                            alert("You have entered an invalid email address!")
+                            return (false)            
+                          }
+                    }
+          elValidator();
+
+  
+
+///This section is only for if the credit card was selected
+
+if(creditSelect.selected){
  
             
              if(ccNum.value == '' || zip.value == '' || cvv.value == ''  ){
@@ -307,9 +314,6 @@ if(creditSelect.value && !paypalSelect.value || !bitcoinSelect.value){
                          e.preventDefault();
                  }     
             }
-        }
-      
-           
             
     if(creditSelect.value ){
           if(ccNum.value == ''){
@@ -398,11 +402,11 @@ if(creditSelect.value && !paypalSelect.value || !bitcoinSelect.value){
                     else{
                       cvvError.style.display='none';
                     }
-                }
-              }         
+              }
+    }         
 
 //Closing Tag for Submit Hangler
-
+}
 
 });
 
