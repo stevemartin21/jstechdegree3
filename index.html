@@ -23,7 +23,7 @@
         <legend>Basic Info</legend>
         
         <label for="name">Name:</label>
-        <input type="text" id="name" name="user_name" autofocus>
+        <input type="text" id="name" name="user_name">
         <div id="nameError">You must fill out your name </div>
         
         <label for="mail">Email:</label>
@@ -90,7 +90,7 @@
         <label><input type="checkbox" name="npm"> npm Workshop — Wednesday 1pm-4pm, $100</label>
 
          <div id="activitiesError">You must choose an activity silly</div>
-         <p>Running Total:</p>
+         <p id="runningTotal"></p>
                   	
       </fieldset>
       <fieldset>
@@ -99,7 +99,7 @@
         <label for="payment">I'm going to pay with:</label>
         <select id="payment" name="user_payment">
           <option value="select_method">Select Payment Method</option>
-          <option value="credit card">Credit Card</option>
+          <option value="credit card" selected="">Credit Card</option>
           <option value="paypal">PayPal</option>
           <option value="bitcoin">Bitcoin</option>
         </select>
@@ -109,19 +109,19 @@
           <div class="col-6 col">
             <label for="cc-num">Card Number:</label>
         	  <input id="cc-num" name="user_cc-num" type="text">
-            <div id="ccNumError">You must enter a credit card number</div>
+            <div id="ccNumError">You have an error with your credit card</div>
           </div>
 
           <div class="col-3 col">
             <label for="zip">Zip Code:</label>
             <input id="zip" name="user_zip" type="text"> 
-            <div id="zipError">You must enter a zip code</div>
+            <div id="zipError">There is an error with your zip code</div>
           </div>
 
           <div class="col-3 col">
             <label for="cvv">CVV:</label>
             <input id="cvv" name="user_cvv" type="text">
-            <div id="cvvError">You must enter a CVV code</div> 
+            <div id="cvvError">There is an error with your CVV code</div> 
           </div>
 
           <label for="exp-month">Expiration Date:</label>
